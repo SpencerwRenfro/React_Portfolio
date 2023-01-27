@@ -2,12 +2,15 @@ import './App.css';
 import Card from './components/Card';
 import Routes from "./components/Routes";
 import AboutMe from "./components/AboutMe"
+import { ThemeContext } from './contexts/ThemeContext';
+import { useRef, useEffect, useState, useContext } from 'react';
 
 // // theme changer
 
 // // icones
-// const sunIcon = document.querySelector(".sun");
-// const moonIcon = document.querySelector(".moon");
+const sunIcon = document.querySelector(".sun");
+const moonIcon = document.querySelector(".moon");
+
 
 // // theme vars --- opitional 
 // const userTheme = localStorage.getItem("theme");
@@ -56,14 +59,26 @@ import AboutMe from "./components/AboutMe"
 // themeCheck();
 
 function App() {
+
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    document.querySelector('html').setAttribute('data-theme', `${isDarkMode ? 'dark': 'light' }`);
+  }, [isDarkMode]);
+
   return (
-    <div className="App">
-      <div class="flex gap-56">
-        <Card />
-        <Routes/>
-      </div>
-      <AboutMe />
-    </div>
+
+    <ThemeContext.Provider value={isDarkMode} >
+      <div className={`App ${isDarkMode ? 'dark': 'light' }`}>
+        <div className="flex gap-56">
+          <Card />
+          <Routes 
+            setIsDarkMode={setIsDarkMode}
+          />
+        </div >
+        <AboutMe />
+      </div >
+    </ThemeContext.Provider>
   );
 }
 
