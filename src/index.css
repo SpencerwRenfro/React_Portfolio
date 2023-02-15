@@ -45,6 +45,7 @@ code {
 
 .icon-images {
   width: 60px;
+  height: 60px;
   display: block;
   text-align: center;
   padding-bottom: 4px;
@@ -72,3 +73,14 @@ nav a.active:hover {
 ul li.active{
   color: red;
 } */
+
+.crop {
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+ }
+ .crop img {
+  height: auto;
+  width: 400px;
+  background-size: cover;
+ }

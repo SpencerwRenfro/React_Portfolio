@@ -14,6 +14,9 @@ import Contact from './components/Contact';
 import Works from './components/Works';
 // subRoutes
 import Polytopia from './components/Polytopia';
+import ProjectTwo from './components/ProjectTwo';
+import Project3 from './components/Project3';
+
 
 
 function App() {
@@ -36,6 +39,8 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="works" element={<Works />}>
             <Route path="polytopia" element={<Polytopia/>}></Route>
+            <Route path="projecttwo" element={<ProjectTwo/>}></Route>
+            <Route path="projectthree" element={<Project3 />}></Route>
           </Route>
         </Routes>
 

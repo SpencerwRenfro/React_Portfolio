@@ -1,7 +1,9 @@
 export default function Polytopia(){
     return(
         <div className=" overflow-auto  max-h-[40rem]">
-            <h1 className="mt-10 ml-10 mr-10 text-primary-content text-xl">Polytopia Battle Calculator </h1>
+            <div className="flex justify-center">
+            <h1 className="mt-10 ml-10 mr-10 text-primary-content text-3xl justify-center ">Polytopia Battle Calculator </h1>
+            </div>
             <h2 className="mt-10 text-primary-content text-xl ml-3">What it does</h2>
             <p className="mt-2 text-xl ml-3 mr-10">This is a damage calculator that the mobile game of Polytopia uses for their characters. This allows you to select the type of character you 
                 want to see the battle results of, while being able to change some input variables of the game. Variables such as, input health, defense, poison, 
@@ -23,7 +25,7 @@ export default function Polytopia(){
             the DOM. This layout was created by using two form layouts, one for the attacker and one for the defender. </p>
 
             <h2 className="mt-10 text-primary-content text-xl ml-3">React</h2>
-            <p className="mt-2 text-xl ml-3 mr-10">
+            <p className="mt-2 ml-3 mb-6 text-xl mr-10">
             Lastly in React the user interface is much nicer with using a CSS framework of Tailwind, and I have incorporated an API to load all of the characters 
             with React Query instead of having all the character data hard coded.
             </p>

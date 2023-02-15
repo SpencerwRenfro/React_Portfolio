@@ -2,7 +2,7 @@ export default function AboutMe() {
 
     let reactImage = `${process.env.PUBLIC_URL}/images/React2.png`;
     let nodeImage = `${process.env.PUBLIC_URL}/images/nodeJS.png`;
-    let tailwindImage = `${process.env.PUBLIC_URL}/images/tailwind2.png`;
+    let tailwindImage = `${process.env.PUBLIC_URL}/images/tw.png`;
     let cImage = `${process.env.PUBLIC_URL}/images/C.png`;
 
     return (
@@ -41,9 +41,9 @@ export default function AboutMe() {
             <h2 className="mt-10 pl-10 text-primary-content text-xl">Favorite Technologies</h2>
             <div className="flex gap-40 mt-2 pl-10">
                 <div><img className="icon-images" src={reactImage} alt="react img" />React</div>
-                <div><img className="icon-images" src={nodeImage} alt="react img" />Node.js</div>
-                <div><img className="icon-images" src={cImage} alt="react img" />C</div>
-                <div><img className="icon-images" src={tailwindImage} alt="react img" />Tailwind</div>
+                <div className="crop" ><img className="" src={nodeImage} alt="react img" />Node.js</div>
+                <div className="crop" ><img className="" src={cImage} alt="react img" />C</div>
+                <div className="crop" ><img className="icon-images" src={tailwindImage} alt="react img" />Tailwind</div>
             </div>
 
         </div>
