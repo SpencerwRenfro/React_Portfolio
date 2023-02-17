@@ -1,31 +1,48 @@
-import './App.css';
-import Card from './components/Card';
+import "./App.css";
+import Card from "./components/Card";
 import Navbar from "./components/Navbar";
-import AboutMe from "./components/AboutMe"
-import { ThemeContext } from './contexts/ThemeContext';
-import { useRef, useEffect, useState, useContext } from 'react';
+import AboutMe from "./components/AboutMe";
+import { ThemeContext } from "./contexts/ThemeContext";
+import { useRef, useEffect, useState, useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 
-
 // Routes
-import Home from './components/Home';
-import Resume from './components/Resume';
-import Contact from './components/Contact';
-import Works from './components/Works';
+import Home from "./components/Home";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+import Works from "./components/Works";
 // subRoutes
-import Polytopia from './components/Polytopia';
-import ProjectTwo from './components/ProjectTwo';
-import Project3 from './components/Project3';
-
-
+import Polytopia from "./components/Polytopia";
+import ProjectTwo from "./components/ProjectTwo";
+import Project3 from "./components/Project3";
 
 function App() {
-
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
-    document.querySelector('html').setAttribute('data-theme', `${isDarkMode ? 'dark' : 'light'}`);
+    document
+      .querySelector("html")
+      .setAttribute("data-theme", `${isDarkMode ? "dark" : "light"}`);
   }, [isDarkMode]);
+
+  // fetch request
+
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch("Resume.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "Resume.pdf";
+        alink.click();
+      });
+    });
+  };
+
+  // end
 
   return (
     <div>
@@ -33,28 +50,29 @@ function App() {
       <div className="grid grid-cols-2">
         <Card />
 
+
         <Routes>
           <Route path="/" element={<AboutMe />} />
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
           <Route path="works" element={<Works />}>
-            <Route path="polytopia" element={<Polytopia/>}></Route>
-            <Route path="projecttwo" element={<ProjectTwo/>}></Route>
+            <Route path="polytopia" element={<Polytopia />}></Route>
+            <Route path="projecttwo" element={<ProjectTwo />}></Route>
             <Route path="projectthree" element={<Project3 />}></Route>
           </Route>
         </Routes>
-
-
       </div>
+      <div className="self-center mt-4">
+          <button onClick={onButtonClick} className="btn btn-primary flex">Download Resume</button>
+        </div>
     </div>
   );
 }
 
 export default App;
 
-
-
-{/* <div className="main-content home">
+{
+  /* <div className="main-content home">
                 <Card />
             </div>
 
@@ -69,9 +87,11 @@ export default App;
               <Route path="/" element={<Home/>}/>
             </Routes>
            
-</ThemeContext.Provider> */}
+</ThemeContext.Provider> */
+}
 
-{/* 
+{
+  /* 
 // <ThemeContext.Provider value={isDarkMode} >
 // <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
 //  <div className="flex gap-56">
@@ -80,12 +100,12 @@ export default App;
 //  </div >
 //  <AboutMe />
 // </div > 
-// </ThemeContext.Provider>  */}
+// </ThemeContext.Provider>  */
+}
 
-
-
-// extra working 
-{/* <ThemeContext.Provider value={isDarkMode} >
+// extra working
+{
+  /* <ThemeContext.Provider value={isDarkMode} >
 <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
  <Navbar setIsDarkMode={setIsDarkMode}/>
 <Routes>
@@ -93,22 +113,17 @@ export default App;
 </Routes>
 </div>
 
-</ThemeContext.Provider>  */}
+</ThemeContext.Provider>  */
+}
 
-
-
-
-
-
-// dark/ light theme changer that didnt work 
+// dark/ light theme changer that didnt work
 // // theme changer
 
 // // icones
 // const sunIcon = document.querySelector(".sun");
 // const moonIcon = document.querySelector(".moon");
 
-
-// // theme vars --- opitional 
+// // theme vars --- opitional
 // const userTheme = localStorage.getItem("theme");
 // const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -149,7 +164,6 @@ export default App;
 // moonIcon.addEventListener("click", () => {
 //   themeSwitch();
 // });
-
 
 // // invoke them check on inital load
 // themeCheck();

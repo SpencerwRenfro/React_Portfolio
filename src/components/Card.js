@@ -1,13 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 
 
-export default function Card(props) {
+
+
+export default function Card() {
 
 
     let profileImage = `${process.env.PUBLIC_URL}/images/dan.png`;
-
+  
+     // fetch request
+    const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch("Resume.pdf").then((response) => {
+          response.blob().then((blob) => {
+            // Creating new object of PDF file
+            const fileURL = window.URL.createObjectURL(blob);
+            // Setting various property values
+            let alink = document.createElement("a");
+            alink.href = fileURL;
+            alink.download = "Resume.pdf";
+            alink.click();
+          });
+        });
+    }
+ // end
 
     return (
         <div className="m-0 p-0 w-3/5">
@@ -42,7 +59,7 @@ export default function Card(props) {
                     </div>
 
                     <div className="self-center mt-4">
-                        <button className="btn btn-primary flex">Download Resume</button>
+                        <button onClick={onButtonClick} className="btn btn-primary flex">Download Resume</button>
                     </div>
                 </div>
             </div>
