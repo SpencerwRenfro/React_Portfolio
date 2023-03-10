@@ -15,6 +15,11 @@ import Works from "./components/Works";
 import Polytopia from "./components/Polytopia";
 import ProjectTwo from "./components/ProjectTwo";
 import Project3 from "./components/Project3";
+// sub-sub-Routes
+import ReactPreview from "./components/ReactPreview";
+import CPreview from "./components/CPreview";
+import JSPreview from "./components/JSPreview";
+
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -46,25 +51,27 @@ function App() {
 
   return (
     <div>
+          {/* <div  className="dark:bg-black dark:text-white dark:bg-none">
+          FOR EDITING THEME COLOR */}
       <Navbar />
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         <Card />
-
 
         <Routes>
           <Route path="/" element={<AboutMe />} />
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
           <Route path="works" element={<Works />}>
-            <Route path="polytopia" element={<Polytopia />}></Route>
-            <Route path="projecttwo" element={<ProjectTwo />}></Route>
-            <Route path="projectthree" element={<Project3 />}></Route>
+            <Route path="polytopia" element={<Polytopia />} />
+            <Route path="polytopia/react-preview" element={<ReactPreview />}/>
+              <Route path="polytopia/c-preview" element={<CPreview />} />
+              <Route path="polytopia/javascript-preview" element={<JSPreview />}/>
+            <Route path="projecttwo" element={<ProjectTwo />}/>
+            <Route path="projectthree" element={<Project3 />}/>
           </Route>
         </Routes>
       </div>
-      <div className="self-center mt-4">
-          <button onClick={onButtonClick} className="btn btn-primary flex">Download Resume</button>
-        </div>
+  
     </div>
   );
 }

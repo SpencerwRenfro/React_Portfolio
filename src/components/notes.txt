@@ -1,0 +1,20 @@
+Center About me text under the SVGs
+make headshot smaller more into a facebook avatar 
+decrease gap between cards
+bottom padding on svg imgs in about me
+get rid of scroll bar in about me
+ask Drew about icon libraries for stuff for facebook, github 
+make treeHouse data into a character
+Order data like Javascript first
+add comma into Points
+change resume to education possibly, and or add education like computer science classes
+
+Grid of polytopia project 1,2,3 with thumbnails (3 column grid) and go into detail in a modal or separate page when one is clicked
+
+make portfolio into its own full page link or modal 
+hierachy for propjects:
+ title 
+ product preview image,(teaser)
+ what it does code previews
+ buttons for gifs
+ then challenge etc

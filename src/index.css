@@ -44,11 +44,25 @@ code {
 }
 
 .icon-images {
-  width: 60px;
-  height: 60px;
+
+  height: 90px;
   display: block;
   text-align: center;
-  padding-bottom: 4px;
+ display: inline-block;
+ margin:10px;
+
+} 
+
+.image-box {
+  /* padding:10px; */
+  display: inline-block;
+}
+
+.image-title{
+  width: 140px;
+  height: 125px;
+  padding-top: 5px;
+  padding-bottom: 2px;
 }
 
 .activeSelected {

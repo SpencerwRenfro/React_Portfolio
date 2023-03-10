@@ -1,12 +1,19 @@
+import './Badges.css';
 export default function AboutMe() {
 
     let reactImage = `${process.env.PUBLIC_URL}/images/React2.png`;
     let nodeImage = `${process.env.PUBLIC_URL}/images/nodeJS.png`;
     let tailwindImage = `${process.env.PUBLIC_URL}/images/tw.png`;
-    let cImage = `${process.env.PUBLIC_URL}/images/C.png`;
+    let cImage = `${process.env.PUBLIC_URL}/images/Cimg.png`;
+    let newNode = `${process.env.PUBLIC_URL}/images/nodeJSg.png`;
+    let newReact = `${process.env.PUBLIC_URL}/images/REACT.png`; 
+    let gitHub = `${process.env.PUBLIC_URL}/images/gitHub.png`; 
+    let restAPI = `${process.env.PUBLIC_URL}/images/RestApi.png`; 
+    // react-new.png
+    // C:\Users\Spenc\Repositories\React\Portfolio\react-portfolio\public\images\node-svg.jpg
 
     return (
-        <div className="bg-neutral card shadow-xl mx-16 mt-10 overflow-auto  max-h-[40rem]">
+        <div className="bg-neutral card shadow-xl mx-16 mt-10 overflow-auto  max-h-[50rem]">
             <div className="mt-2 pl-10">
                 <h2 className="mt-10 text-primary-content text-xl">About Me</h2>
                 <p className="mt-2 text-xl">
@@ -40,11 +47,13 @@ export default function AboutMe() {
 
             <h2 className="mt-10 pl-10 text-primary-content text-xl">Favorite Technologies</h2>
             <div className="flex gap-40 mt-2 pl-10">
-                <div><img className="icon-images" src={reactImage} alt="react img" />React</div>
-                <div className="crop" ><img className="" src={nodeImage} alt="react img" />Node.js</div>
-                <div className="crop" ><img className="" src={cImage} alt="react img" />C</div>
-                <div className="crop" ><img className="icon-images" src={tailwindImage} alt="react img" />Tailwind</div>
+                {/* <div><img  width="60" src={reactImage} alt="react img" />React</div> */}
+                <div><img  width="60"  src={nodeImage} alt="react img" />Node.js</div>
+                <div><img className="" width="60"  src={cImage} alt="react img" />C</div>
+                <div><img className="badge-image" width="60" src={restAPI} alt="react img"/>Rest API's</div>
+                <div><img className="" width="60" src={gitHub} alt="react img" />GitHUb</div>
             </div>
+ 
 
         </div>
     );
