@@ -10,6 +10,8 @@ add comma into Points
 change resume to education possibly, and or add education like computer science classes
 
 Grid of polytopia project 1,2,3 with thumbnails (3 column grid) and go into detail in a modal or separate page when one is clicked
+Save img as a jpg 
+
 
 make portfolio into its own full page link or modal 
 hierachy for propjects:

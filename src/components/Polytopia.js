@@ -7,7 +7,7 @@ export default function Polytopia() {
     const cGif = `${process.env.PUBLIC_URL}/Gifs/Polytopia-C-recording2.gif`;
     const jsGif = `${process.env.PUBLIC_URL}/Gifs/Polytopia-JS-recording.gif`;
 
-    const  [emptyGif,setEmptyGif] = useState(''); 
+    let  [emptyGif,setEmptyGif] = useState(rGif); 
 
     let [reactGif, setReactGif] = useState(false);
     let [javascriptGif, setJavascriptGif] = useState(false);
@@ -19,7 +19,7 @@ export default function Polytopia() {
             console.log('React verified');
             setReactGif = true;
             emptyGif = rGif;
-            console.log(emptyGif + '   empty gif')
+            console.log(emptyGif + '   empty React gif')
             if(e.target.HTML === 'close'){
                 setReactGif = false;
                 console.log('React closed');
@@ -32,7 +32,8 @@ export default function Polytopia() {
             setCImage = true;
             // setReactGif = false;
             // setJavascriptGif = false;
-            emptyGif = cGif;
+            setEmptyGif = cGif;
+            console.log(emptyGif + ' empty C' );
             if(e.target.HTML === 'close'){
                 setCImage = false;
                 console.log('C closed');
@@ -42,7 +43,8 @@ export default function Polytopia() {
             setJavascriptGif = true;
             // setCImage = false;
             // setReactGif = false;
-            emptyGif = jsGif;
+            setEmptyGif = jsGif;
+            console.log(emptyGif + ' empty JS' );
             if(e.target.HTML === 'close'){
                 setJavascriptGif = false;
                 console.log('js closed');
@@ -105,7 +107,7 @@ export default function Polytopia() {
   <div className=" w-3/4">
     <div className="object-none w-full">
         {/* <img src={`${!reactGif ? `${rGif}` : ''}` } alt =""/> */}
-        <img src={`${emptyGif}` } alt =""/>
+        <img src={`${emptyGif.length > 0 ? `${emptyGif}` : ''}` } alt =""/>
         {/* <img src={`${!reactGif ? !cGif ? `${rGif}` : ''}` } alt =""/>
         <img src={`${!cImage ? `${cGif}` : ''}` } alt =""/> */}
     </div>
