@@ -58,7 +58,7 @@ function App() {
         <Card />
 
         <Routes>
-          <Route path="/" element={<AboutMe />} />
+          <Route path="/React_Portfolio" element={<AboutMe />} />
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
           <Route path="works" element={<Works />}>
