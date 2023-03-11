@@ -27,9 +27,9 @@ export default function Card() {
  // end
 
     return (
-        <div className="m-0 p-0 w-3/5 relative ">
+        <div className="m-0 p-0 w-3/5 xl:relative ">
 
-            <div className="card bg-neutral  shadow-xl mx-16 mt-10 p-0 fixed profile-card ">
+            <div className="card bg-neutral  shadow-xl mx-16 mt-10 p-0 xl:fixed profile-card ">
             {/* <div className="card bg-neutral  shadow-xl mx-16 mt-10 p-0 dark:bg-black dark:text-white dark:bg-none">
                 for edditing theme
             */}
