@@ -27,15 +27,17 @@ export default function Card() {
  // end
 
     return (
-        <div className="m-0 p-0 w-3/5">
+        <div className="m-0 p-0 w-3/5 relative ">
 
-            <div className="card bg-neutral  shadow-xl mx-16 mt-10 p-0">
+            <div className="card bg-neutral  shadow-xl mx-16 mt-10 p-0 fixed profile-card ">
             {/* <div className="card bg-neutral  shadow-xl mx-16 mt-10 p-0 dark:bg-black dark:text-white dark:bg-none">
                 for edditing theme
             */}
                 <div className="card-body ">
 
-                    <figure><img src={profileImage} alt="Spencer Renfro" /></figure>
+                    <figure className=" ">
+                        <img className="profile-image" src={profileImage} alt="Spencer Renfro" />
+                    </figure>
                     <h2 className="card-title justify-center text-primary-content">Spencer Renfro</h2>
                     <h3 className="bg-base-300 self-center p-1.5 rounded-lg">Front End Developer</h3>
 

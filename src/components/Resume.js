@@ -147,7 +147,7 @@ export default function Resume() {
                         <div className="mt-5 mb-10 border-bottom">
                                 <h1 className="normal-case text-2xl grow h-7 ml-5 mb-2 text-center" border-bottom>Achievements</h1>
                             </div>
-                            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  max-h-[40rem] overflow-auto "> {/**overflow-auto  */}
+                            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  "> {/**for scroll bar max-h-[40rem] overflow-auto  */}
                                 {console.log("BadgeData",badgeData)}
                             {badgeData.map((data) => (                       
                                 <li className="image-box" key={data.id}>

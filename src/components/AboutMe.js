@@ -13,7 +13,8 @@ export default function AboutMe() {
     // C:\Users\Spenc\Repositories\React\Portfolio\react-portfolio\public\images\node-svg.jpg
 
     return (
-        <div className="bg-neutral card shadow-xl mx-16 mt-10 overflow-auto  max-h-[50rem]">
+        <div className="bg-neutral card shadow-xl mx-16 mt-10 ">
+            {/* overflow-auto  max-h-[50rem] this is for scroll bar */}
             <div className="mt-2 pl-10">
                 <h2 className="mt-10 text-primary-content text-xl">About Me</h2>
                 <p className="mt-2 text-xl">
