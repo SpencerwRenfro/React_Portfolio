@@ -15,7 +15,7 @@ export default function Navbar(props) {
 
     return (
 
-        <div>
+        <div className="bg-base-300 ">
 
             {/* 
             Before active style
@@ -55,7 +55,7 @@ export default function Navbar(props) {
                         </svg>
                     </Link>
                 </button>
-                <NavLink className="btn btn-primary" to="resume" activeStyle={"primary-focus"}>Resume</NavLink>
+                <NavLink className="btn btn-primary" to="resume" activeStyle={"primary-focus"}>Education</NavLink>
             <NavLink className="btn btn-primary" to="works/polytopia" activeStyle={"primary-focus"}>Works</NavLink>
             </nav>
 

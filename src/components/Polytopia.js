@@ -61,13 +61,13 @@ export default function Polytopia() {
     return (
         <div className=" ">
             {/* overflow-auto  max-h-[50rem] this is for scroll bar*/}
-            <div className="flex flex-row bg-neutral">
+            {/* <div className="flex flex-row bg-neutral"> */}
                 {/* <h2 className="mt-10 text-primary-content text-xl ml-3 ">Code Previews</h2>
                 <NavLink className="btn btn-primary m-3 h-2 " activeStyle={"primary-focus"} to="c-preview">C-Language</NavLink>
                 <NavLink className="btn btn-primary m-3" activeStyle={"primary-focus"} to="javascript-preview">JavaScript</NavLink>
                 <Link className="btn btn-primary m-3" activeStyle={"primary-focus"} to="react-preview">React</Link> */}
 
-            </div>
+            {/* </div> */}
             <div className="flex justify-center">
                 <h1 className="mt-10 ml-10 mr-10 text-primary-content text-3xl justify-center ">Polytopia Battle Calculator </h1>
             </div>
