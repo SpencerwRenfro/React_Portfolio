@@ -6,14 +6,14 @@ export default function AboutMe() {
     let tailwindImage = `${process.env.PUBLIC_URL}/images/tw.png`;
     let cImage = `${process.env.PUBLIC_URL}/images/Cimg.png`;
     let newNode = `${process.env.PUBLIC_URL}/images/nodeJSg.png`;
-    let newReact = `${process.env.PUBLIC_URL}/images/REACT.png`; 
-    let gitHub = `${process.env.PUBLIC_URL}/images/gitHub.png`; 
-    let restAPI = `${process.env.PUBLIC_URL}/images/RestApi.png`; 
+    let newReact = `${process.env.PUBLIC_URL}/images/REACT.png`;
+    let gitHub = `${process.env.PUBLIC_URL}/images/github.png`;
+    let restAPI = `${process.env.PUBLIC_URL}/images/RestApi.png`;
     // react-new.png
     // C:\Users\Spenc\Repositories\React\Portfolio\react-portfolio\public\images\node-svg.jpg
 
     return (
-        <div className="bg-neutral card shadow-xl mx-16 mt-10 ">
+        <div className="bg-neutral card shadow-xl mt-10 ">
             {/* overflow-auto  max-h-[50rem] this is for scroll bar */}
             <div className="mt-2 pl-10">
                 <h2 className="mt-10 text-primary-content text-xl">About Me</h2>
@@ -46,15 +46,30 @@ export default function AboutMe() {
                 </div>
             </div>
 
-            <h2 className="mt-10 pl-10 text-primary-content text-xl">Favorite Technologies</h2>
-            <div className="flex gap-40 mt-2 pl-10">
-                {/* <div><img  width="60" src={reactImage} alt="react img" />React</div> */}
-                <div><img  width="60"  src={nodeImage} alt="react img" />Node.js</div>
-                <div><img className="" width="60"  src={cImage} alt="react img" />C</div>
-                <div><img className="badge-image" width="60" src={restAPI} alt="react img"/>Rest API's</div>
-                <div><img className="" width="60" src={gitHub} alt="react img" />GitHUb</div>
+            <div className="flex justify-center pb-5">
+            <h2 className="mt-10 text-primary-content text-xl justify-center">Favorite Technologies</h2>
             </div>
- 
+            {/* <div className="flex gap-40 mt-2 pl-10"> */}
+                {/* <div><img  width="60" src={reactImage} alt="react img" />React</div> */}
+                {/* <div><img width="60" src={nodeImage} alt="react img" />Node.js</div>
+                <div><img className="" width="60" src={cImage} alt="react img" />C</div>
+                <div><img className="badge-image" width="60" src={restAPI} alt="react img" />Rest API's</div>
+                <div><img className="" width="60" src={gitHub} alt="react img" />GitHUb</div>
+            </div> */}
+
+
+
+            <div class="grid grid-cols-4 justify-items-center mb-5">
+                <div><img className="" width="60" src={cImage} alt="react img" /></div>
+                <div><img width="60" src={nodeImage} alt="react img" /></div>
+                <div><img className="" width="60" src={restAPI} alt="react img" /></div>
+                <div><img className="" width="60" src={gitHub} alt="react img" /></div>
+                <div>C</div>
+                <div>Node.js</div>
+                <div>Rest API's</div>
+                <div>GitHub</div>
+            </div>
+
 
         </div>
     );

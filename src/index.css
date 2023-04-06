@@ -7,6 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.spinner{
+  height: 60px;
+  width: 60px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -19,10 +24,7 @@ code {
   overflow: visible;
 } 
 
-.profile-card{
-  width: 700px;
-  height:600px;
-}
+
 
 .background-image {
   color: white;
@@ -120,3 +122,62 @@ ul li.active{
   width: 400px;
   background-size: cover;
  }
+
+ /* .profile-card{
+  width: 700px;
+  height:600px;
+} */
+
+ /* .wrapper {
+  width: 300px;
+  height: 300px;
+  background: gold;
+} */
+
+/* @media screen and (min-width: 200) and (max-width: 400px) {
+  .profile-card{
+  width: 100px;
+  height:200px; 
+  }
+
+}
+
+@media screen and (min-width: 400) and (max-width: 699px) {
+  .profile-card{
+  width: 700px;
+  height:600px; 
+  }
+} */
+
+
+/* @media screen and (min-width: 200)  {
+  .profile-card{
+  width: 200px;
+  height:100px; 
+  background-color: black;
+  }
+} */
+
+
+/* 
+@media screen and (min-width: 700px) {
+  .profile-card{
+  width: 500px;
+  height:600px; 
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .profile-card{
+  width: 700px;
+  height:600px; 
+  padding: 100px;
+  }
+} */
+
+/* @media screen and (min-width: 200px) and (max-width: 1000px){
+  .works-buttons{
+  width: 100px;
+  height: 20px;
+  }
+} */

@@ -7,9 +7,8 @@ import { useRef, useEffect, useState, useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 
 // Routes
-import Home from "./components/Home";
+// import Home from "./components/Home";
 import Resume from "./components/Resume";
-import Contact from "./components/Contact";
 import Works from "./components/Works";
 // subRoutes
 import Polytopia from "./components/Polytopia";
@@ -50,28 +49,34 @@ function App() {
   // end
 
   return (
-    <div>
-          {/* <div  className="dark:bg-black dark:text-white dark:bg-none">
+    <div className="bg-base-300 grid  md:grid-cols-1">
+      {/* <div  className="dark:bg-black dark:text-white dark:bg-none">
           FOR EDITING THEME COLOR */}
-      <Navbar />
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className=" flex justify-center bg-base-300">
+        {/* className="sm:grid grid-rows-3" */}
+        <Navbar />
+      </div>
+      <div className="grid  md:grid-cols-2 xl:grid-cols-2 bg-base-300">
         <Card />
 
+          <div>
+            <div className="pr-8">
         <Routes>
-          <Route path="/React_Portfolio" element={<AboutMe />} />
+          <Route path="/" element={<AboutMe />} />
           <Route path="resume" element={<Resume />} />
-          <Route path="contact" element={<Contact />} />
           <Route path="works" element={<Works />}>
             <Route path="polytopia" element={<Polytopia />} />
-            <Route path="polytopia/react-preview" element={<ReactPreview />}/>
-              <Route path="polytopia/c-preview" element={<CPreview />} />
-              <Route path="polytopia/javascript-preview" element={<JSPreview />}/>
-            <Route path="projecttwo" element={<ProjectTwo />}/>
-            <Route path="projectthree" element={<Project3 />}/>
+            <Route path="polytopia/react-preview" element={<ReactPreview />} />
+            <Route path="polytopia/c-preview" element={<CPreview />} />
+            <Route path="polytopia/javascript-preview" element={<JSPreview />} />
+            <Route path="projecttwo" element={<ProjectTwo />} />
+            <Route path="projectthree" element={<Project3 />} />
           </Route>
         </Routes>
+        </div>
+        </div>
       </div>
-  
+
     </div>
   );
 }
