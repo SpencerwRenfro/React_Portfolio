@@ -47,7 +47,7 @@ export default function Card() {
 
 
     return (
-            <div className="card bg-neutral shadow-xl lg:mt-10 xl:fixed profile-card xl:p-0 ml-10" >
+          <div className="card bg-neutral shadow-xl xl:fixed profile-card xl:p-0" >
                 <div className="card-body ">
 
                     <figure>
@@ -56,14 +56,18 @@ export default function Card() {
                     <h2 className="card-title justify-center text-primary-content">Spencer Renfro</h2>
                     <h3 className="bg-base-300 self-center p-1.5 rounded-lg">Front End Developer</h3>
 
-                    <div className="card-actions justify-center ">
-
-                        <a className="btn btn-primary" href="https://github.com/SpencerwRenfro?tab=projects" target="_blank" rel="noopener noreferrer">
+                    <div className="card-actions justify-center flex flex-col">
+                        {/* TODO: make the button full width on mobile, but auto width on md devices or larger */}
+                        <a className="btn btn-primary w-full " href="https://github.com/SpencerwRenfro?tab=projects" target="_blank" rel="noopener noreferrer">
                             Github
                         </a>
-                        <a className="btn btn-primary" href="https://www.linkedin.com/in/spencer-renfro-854b22174/" target="_blank" rel="noopener noreferrer">
+                        <a className="btn btn-primary w-full" href="https://www.linkedin.com/in/spencer-renfro-854b22174/" target="_blank" rel="noopener noreferrer">
                             LinkedIn
                         </a>
+                          {/* <button onClick={onButtonClick} className="btn btn-primary flex">Download Resume</button> */}
+                          <a className="btn btn-primary w-full" href="https://docs.google.com/document/d/1vepN6ogWXxj5zuMN96skXjb8uTXHfdQLol_UHH86TDU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            Resume
+                          </a>
 
                     </div>
 
@@ -76,15 +80,6 @@ export default function Card() {
                             <li>Height: {windowSize[1]}</li>
                         </ul>
                     </div>
-
-                    <div className="self-center ">
-                        {/* <button onClick={onButtonClick} className="btn btn-primary flex">Download Resume</button> */}
-                        <a className="btn btn-primary" href="https://docs.google.com/document/d/1vepN6ogWXxj5zuMN96skXjb8uTXHfdQLol_UHH86TDU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            Resume
-                        </a>
-                    </div>
-            
-      
                 </div>
             </div>
     );

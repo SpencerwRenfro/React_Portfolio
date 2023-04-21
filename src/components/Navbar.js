@@ -13,7 +13,7 @@ export default function Navbar(props) {
 
 
     return (
-            <nav  className=" container mx-auto mt-10  w-80 p-3 shadow-xl bg-neutral card gap-4 flex-row justify-space-between  " >
+            <nav  className=" container mx-auto  w-80 p-3 shadow-xl bg-neutral card gap-4 flex-row justify-space-between  " >
                 {/*  className="redbox col-span-12 md:col-span-2 md:col-end-12  shadow-xl bg-neutral card flex-row space-x-4 justify-center" */}
 
                 <button>
