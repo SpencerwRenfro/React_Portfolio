@@ -5,7 +5,7 @@ export default function HoverMenu() {
     
     return(
         <div>
-        <div className="dropdown dropdown-hover">
+        <div className="dropdown dropdown-end">
         <label tabIndex={0} className="btn m-1">Projects</label>
         <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
             <NavLink className="btn btn-primary mb-3 " activestyle={"primary-focus"} to="polytopia">Polytopia</NavLink>
