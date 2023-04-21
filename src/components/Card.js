@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect  } from 'react';
 
 
 
@@ -6,9 +7,26 @@ import React from 'react';
 
 export default function Card() {
 
+    const [windowSize, setWindowSize] = useState([
+        window.innerWidth,
+        window.innerHeight,
+      ]);
+    
+      useEffect(() => {
+        const handleWindowResize = () => {
+          setWindowSize([window.innerWidth, window.innerHeight]);
+        };
+    
+        window.addEventListener('resize', handleWindowResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+      }, []);
+
 
     let profileImage = `${process.env.PUBLIC_URL}/images/me.png`;
-  
+  /**
      // fetch request
     const onButtonClick = () => {
         // using Java Script method to get PDF file
@@ -23,55 +41,51 @@ export default function Card() {
             alink.click();
           });
         });
-    }
+    }  
+    */
  // end
 
-    return (
-        <div className="">
 
-            <div className="
-            card bg-neutral  shadow-xl mx-16 mt-10 p-0 
-           
-            xl:fixed profile-card
-            ">
-            {/* <div className="card bg-neutral  shadow-xl mx-16 mt-10 p-0 dark:bg-black dark:text-white dark:bg-none">
-                for edditing theme
-            */}
+    return (
+            <div className="card bg-neutral shadow-xl lg:mt-10 xl:fixed profile-card xl:p-0 ml-10" >
                 <div className="card-body ">
 
-                    <figure className=" ">
+                    <figure>
                         <img className="profile-image" src={profileImage} alt="Spencer Renfro" />
                     </figure>
                     <h2 className="card-title justify-center text-primary-content">Spencer Renfro</h2>
                     <h3 className="bg-base-300 self-center p-1.5 rounded-lg">Front End Developer</h3>
 
                     <div className="card-actions justify-center ">
-                        <a className="btn btn-primary" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                            Facebook
-                        </a>
+
                         <a className="btn btn-primary" href="https://github.com/SpencerwRenfro?tab=projects" target="_blank" rel="noopener noreferrer">
                             Github
                         </a>
-                        <a className="btn btn-primary" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <a className="btn btn-primary" href="https://www.linkedin.com/in/spencer-renfro-854b22174/" target="_blank" rel="noopener noreferrer">
                             LinkedIn
                         </a>
 
                     </div>
 
                     <div>
-                        <ul className="bg-base-300 self-center p-1.5 rounded-lg">
+                        <ul className="bg-base-300 self-center p-2 rounded-lg">
                             <li> Phone: 217-313-4416</li>
                             <li>Location: Boulder CO</li>
                             <li>Email: Developer@spencerwrenfro.com</li>
-                            <li>Birthday: October 15 1994</li>
+                            <li>Width: {windowSize[0]}</li>
+                            <li>Height: {windowSize[1]}</li>
                         </ul>
                     </div>
 
-                    <div className="self-center mt-4">
-                        <button onClick={onButtonClick} className="btn btn-primary flex">Download Resume</button>
+                    <div className="self-center ">
+                        {/* <button onClick={onButtonClick} className="btn btn-primary flex">Download Resume</button> */}
+                        <a className="btn btn-primary" href="https://docs.google.com/document/d/1vepN6ogWXxj5zuMN96skXjb8uTXHfdQLol_UHH86TDU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            Resume
+                        </a>
                     </div>
+            
+      
                 </div>
             </div>
-        </div>
     );
 }

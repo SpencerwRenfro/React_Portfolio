@@ -1,5 +1,4 @@
 export default function ProjectTwo() {
-    const fbGif = `${process.env.PUBLIC_URL}/Gifs/facebook-reactions-recording.gif`;
     const fbGif2 = `${process.env.PUBLIC_URL}/Gifs/facebook-reactions-recording2.gif`;
     return (
         <div className="pt-5 pb-5">

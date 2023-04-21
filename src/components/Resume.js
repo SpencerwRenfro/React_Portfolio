@@ -7,6 +7,23 @@ let spinner = `${process.env.PUBLIC_URL}/images/spinner.svg`;
 
 export default function Resume() {
 
+    const [windowSize, setWindowSize] = useState([
+        window.innerWidth,
+        window.innerHeight,
+      ]);
+    
+      useEffect(() => {
+        const handleWindowResize = () => {
+          setWindowSize([window.innerWidth, window.innerHeight]);
+        };
+    
+        window.addEventListener('resize', handleWindowResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+      }, []);
+
 
 
 
@@ -17,18 +34,6 @@ export default function Resume() {
     const [badgeData, setBadgeData] = useState([{}]);
 
 
-    // for grid attempt with images 
-    // const imageSource = badgeData.map((data) => (
-    //     <ul className="grid grid-rows-2 grid-flow-col gap-4">
-    //         <li><img src={data.icon_url} alt=""/></li>
-    //     </ul>
-    // ))
-
-    // in return statement
-    // {badgeData.map((data) =>(
-    //     return <li><img src={data.icon_url} alt=""/></li>
-    //    ))}
-
 
 
     useEffect(() => {
@@ -38,20 +43,6 @@ export default function Resume() {
         console.log("useEffect")
     }, [])
 
-    // const [userName, setUserName] = useState('');
-    // const [javaScriptPoints, setJavaScriptPoints] = useState('');
-    // const [points, setPoints] = useState([totalPoints,userName, javaScriptPoints]);
-
-
-    // const ref = useRef(null);
-    // let myList = ref.current;
-
-
-    // useEffect(() => {
-    //     const element = ref.current;
-    //     console.log(`UseEffect here:${element}`);
-    //     console.log(element.id);
-    //   }, [points]);
 
 
 
@@ -68,30 +59,6 @@ export default function Resume() {
                 setBadgeData(data.badges)
 
 
-                // if(data.points.total){
-                //     setTotalPoints(data.points.total);
-                // }
-                // for (var prop in data.points) {
-                //     console.log(prop + ':' + data.points[prop]);
-                //     // console.log(`experiment ${data.points[prop]}`)
-                //     if(prop === "total"){
-                //          let number = data.points[prop];
-                //         setTotalPoints(number)
-                //         console.log(`totalPoints useState: ${totalPoints} number:${number}`);
-                //     }
-                //   const listItem = document.createElement('li');
-                //   listItem.appendChild(
-                //     document.createElement('strong')
-                //   ).textContent = prop.Name;
-                //   listItem.append(
-                //     ` can be found in ${
-                //       prop.Location
-                //     }. Cost: `
-                //   );
-                //   listItem.appendChild(
-                //     document.createElement('strong')
-                //   ).textContent = `£${prop.Price}`;                          
-                // }
 
 
 
@@ -103,17 +70,24 @@ export default function Resume() {
 
 
     return (
-        <div className="card  bg-neutral  shadow-xl mx-16 mt-10 ">
+        <div className="card  bg-neutral  shadow-xl  mt-10 ">
 
             <div className="main-content home flex justify-center">
                 <div>
-                    <h1 className="normal-case text-2xl grow h-7 ml-5">Education</h1>
+                    <h1 className="normal-case text-2xl grow h-7 pb-20">Education</h1>
                 </div>
+
             </div>
-            <div className="bg-base-300 p-5 m-10 rounded-lg">
+            <div className="bg-base-300 m-5 rounded-lg">
                 <h1 className="normal-case text-2xl pb-20 sm:pb-20 md:pb-20 lg:pb-10 h-7 ml-5 " >TeamTreeHouse Profile Data:</h1>
                 <h3 className="ml-5">Courses Plus Student</h3>
                 <h3 className="ml-5">Member Since January 2, 2020</h3>
+                <p className="pt-5">
+                    This data is taken from https://teamtreehouse.com/spencerrenfro, this is an open source API provided by teamtreehouse
+                </p>
+                <h2>Width: {windowSize[0]}</h2>
+
+                <h2>Height: {windowSize[1]}</h2>
             </div>
 
             {
@@ -146,7 +120,7 @@ export default function Resume() {
                             </ul>
                         </div>
 
-                        <div className="bg-base-300 rounded-lg p-5 m-10">
+                        <div className="bg-base-300 rounded-lg ">
                             <div className="mt-5 mb-10 border-bottom">
                                 <h1 className="normal-case text-2xl grow h-7 ml-5 pb-20 md:mb-2 text-center" border-bottom>Achievements: Total {badgeData.length}</h1>
                             </div>
@@ -177,20 +151,6 @@ export default function Resume() {
                                 </div>
                             </div>
                         </div>
-
-                        {/* 
-                        <div className=" bg-base-300 rounded-lg p-5 m-10 overflow-y-scroll  max-h-[40rem]">
-                            <h1 className="normal-case text-2xl grow h-7 ml-5">Achievements</h1>
-                            {badgeData.map((data) => (
-                                <Badges 
-                                    key={data.id}
-                                    title={data.name}
-                                    image={data.icon_url}
-                                />
-
-                            ))}
-
-                        </div> */}
                     </div>
 
             }
