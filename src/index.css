@@ -1,15 +1,117 @@
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+/* :focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+
+/* table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}  */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+  box-sizing: border-box;
+}
+  /* overflow-x: hidden; */
+  /* box-sizing: border-box; */
+.App {
+  /* min-height: 100vh; */
+  /* overflow-x: hidden; */
+  /* max-width: 100vh; */
+}
+/* .body{
+  max-width: 90%;
+} */
+
+html {
+  /* overflow-wrap: break-word; */
+  /* overflow-x: hidden; */
+  /* overscroll-behavior: contain; */
+}
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
+ /* overflow-x: hidden; */
+
+
 
 .spinner{
   height: 60px;
   width: 60px;
+}
+
+
+.bluebox {
+  background-color: blue;
+}
+
+.redbox {
+  background-color: red;
+}
+
+.dark {
+  background-color: #2A303C;
 }
 
 code {
@@ -31,10 +133,6 @@ code {
   border-radius: solid white 10px;
 }
 
-.overflow{
-  overflow: visible; 
-}
-
 
 
 .icn-logo {
@@ -49,19 +147,7 @@ code {
   border-bottom: 2px solid transparent;
 }
 
-/* .container {
-  width: 95%;
-  max-width: 780px;
-  padding-bottom: 2em;
-  margin: 0 auto 2em;
-  background: gray;
-  border-radius: .5em;
-  box-shadow: 0 3px rgba(0, 0, 0, .1);
-  overflow: hidden;
-} */
-.main-content {
-  /* padding: 1em 2em; */
-}
+
 
 .home a {
   border-color: transparent;
@@ -76,6 +162,20 @@ code {
  margin:10px;
 
 } 
+.blueborder {
+  border: solid 9px blue;
+}
+.redborder {
+  border: solid 9px red;
+}
+.yellowborder {
+  border: solid 9px yellow;
+}
+
+.greenborder {
+  border: solid 9px green;
+}
+
 
 .image-box {
   /* padding:10px; */
@@ -103,14 +203,7 @@ nav a.active{
 .border-bottom{
   border-bottom: 5px solid white;
 }
-/* 
-nav a.active:hover {
-  color: none;
-}
 
-ul li.active{
-  color: red;
-} */
 
 .crop {
   height: 300px;
@@ -123,48 +216,35 @@ ul li.active{
   background-size: cover;
  }
 
- /* .profile-card{
-  width: 700px;
-  height:600px;
-} */
 
- /* .wrapper {
-  width: 300px;
-  height: 300px;
-  background: gold;
-} */
-
-/* @media screen and (min-width: 200) and (max-width: 400px) {
-  .profile-card{
-  width: 100px;
-  height:200px; 
-  }
+ 
+@media screen and (max-width: 600px) {
+.App{
+  margin:0;
+  padding:0;
+}
+.profile-card{
+  margin:0;
+  padding:0;
+}
+.main-nav{
+  margin:0;
+  padding:0;
+}
+body {
+  margin:0;
+  padding:0;
+}
 
 }
 
-@media screen and (min-width: 400) and (max-width: 699px) {
+
+@media screen and (min-width: 1280px) {
   .profile-card{
-  width: 700px;
+  width: 511px;
   height:600px; 
   }
-} */
 
-
-/* @media screen and (min-width: 200)  {
-  .profile-card{
-  width: 200px;
-  height:100px; 
-  background-color: black;
-  }
-} */
-
-
-/* 
-@media screen and (min-width: 700px) {
-  .profile-card{
-  width: 500px;
-  height:600px; 
-  }
 }
 
 @media screen and (min-width: 1500px) {
@@ -173,7 +253,17 @@ ul li.active{
   height:600px; 
   padding: 100px;
   }
-} */
+} 
+
+.previewButton {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1200px) {
+  .previewButton {
+    visibility: visible;
+  }
+} 
 
 /* @media screen and (min-width: 200px) and (max-width: 1000px){
   .works-buttons{
@@ -181,3 +271,19 @@ ul li.active{
   height: 20px;
   }
 } */
+
+ @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .profile-card {
+    background-color: #bada55;
+    width: 300px;
+    height:600px; 
+    border: 10px solid white;
+
+  }
+
+  .route-box {
+    max-width: 90%;
+     
+    border: 10px solid white;
+  }
+} 

@@ -5,6 +5,7 @@ import AboutMe from "./components/AboutMe";
 import { ThemeContext } from "./contexts/ThemeContext";
 import { useRef, useEffect, useState, useContext } from "react";
 import { Route, Routes } from "react-router-dom";
+import React from "react";
 
 // Routes
 // import Home from "./components/Home";
@@ -21,46 +22,51 @@ import JSPreview from "./components/JSPreview";
 
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
 
-  useEffect(() => {
-    document
-      .querySelector("html")
-      .setAttribute("data-theme", `${isDarkMode ? "dark" : "light"}`);
-  }, [isDarkMode]);
 
   // fetch request
 
-  const onButtonClick = () => {
-    // using Java Script method to get PDF file
-    fetch("Resume.pdf").then((response) => {
-      response.blob().then((blob) => {
-        // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob);
-        // Setting various property values
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "Resume.pdf";
-        alink.click();
-      });
-    });
-  };
+  // const onButtonClick = () => {
+  //   // using Java Script method to get PDF file
 
-  // end
+  //   fetch("Resume.pdf").then((response) => {
+  //     response.blob().then((blob) => {
+  //       // Creating new object of PDF file
+
+  //       const fileURL = window.URL.createObjectURL(blob);
+
+  //       // Setting various property values
+  //       // let alink = document.createElement("a");
+
+
+  //       let alink = React.createElement('a',null, '');
+  //       alink.href = fileURL;
+  //       alink.download = "Resume.pdf";
+  //       alink.click();
+  //     });
+  //   });
+  // };
+
+
 
   return (
-    <div className="bg-base-300 grid  md:grid-cols-1">
-      {/* <div  className="dark:bg-black dark:text-white dark:bg-none">
-          FOR EDITING THEME COLOR */}
-      <div className=" flex justify-center bg-base-300">
-        {/* className="sm:grid grid-rows-3" */}
-        <Navbar />
+    <div className="bg-base-300">
+      {/* grid  md:grid-cols-1" */}
+      {/* <div className=" flex justify-center md:justify-end bg-base-300"> */}
+      <div>
+        {/*  className="grid grid-cols-12  bluebox" */}
+        <div className=" flex justify-center bg-base-300">
+          {/*  className="col-span-3 md:col-span-12 md:col-end-12  redbox" */}
+          <Navbar />
+        </div>
       </div>
-      <div className="grid  md:grid-cols-2 xl:grid-cols-2 bg-base-300">
+      <div className="grid  md:grid-cols-2 xl:grid-cols-2 bg-base-300  justify-center">
+        <div className="pb-20">
         <Card />
-
+        </div>
           <div>
-            <div className="pr-8">
+            <div className="pt-8 md:pr-8  redborder ">
+            
         <Routes>
           <Route path="/" element={<AboutMe />} />
           <Route path="resume" element={<Resume />} />
@@ -83,99 +89,3 @@ function App() {
 
 export default App;
 
-{
-  /* <div className="main-content home">
-                <Card />
-            </div>
-
-
-
-
-
-{/* <ThemeContext.Provider value={isDarkMode} >
-<Navbar setIsDarkMode={setIsDarkMode} />
-  
-            <Routes>
-              <Route path="/" element={<Home/>}/>
-            </Routes>
-           
-</ThemeContext.Provider> */
-}
-
-{
-  /* 
-// <ThemeContext.Provider value={isDarkMode} >
-// <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
-//  <div className="flex gap-56">
-//    <Card />
-//    <Navbar setIsDarkMode={setIsDarkMode}/>
-//  </div >
-//  <AboutMe />
-// </div > 
-// </ThemeContext.Provider>  */
-}
-
-// extra working
-{
-  /* <ThemeContext.Provider value={isDarkMode} >
-<div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
- <Navbar setIsDarkMode={setIsDarkMode}/>
-<Routes>
- <Route path="/" element={<Home/>}/>
-</Routes>
-</div>
-
-</ThemeContext.Provider>  */
-}
-
-// dark/ light theme changer that didnt work
-// // theme changer
-
-// // icones
-// const sunIcon = document.querySelector(".sun");
-// const moonIcon = document.querySelector(".moon");
-
-// // theme vars --- opitional
-// const userTheme = localStorage.getItem("theme");
-// const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-// // icon toggling
-// const iconToggle = () => {
-//   moonIcon.classList.toggle("display-none");
-//   sunIcon.classList.toggle("display-none");
-// }
-
-// // Initial Theme CVHeck
-// const themeCheck = () => {
-//   if (userTheme === "dark" || (!userTheme && systemTheme)) {
-//     document.documentElement.classList.add("dark");
-//     moonIcon.classList.add("display-none");
-//     return;
-//   }
-//   sunIcon.classList.add("display-none");
-// };
-
-// // Manual Theme Switch
-// const themeSwitch = () => {
-//   if(document.documentElement.classList.contains("dark")) {
-//     document.documentElement.classList.remove("dark");
-//     localStorage.setItem("theme", "light");
-//     iconToggle();
-//     return;
-//   }
-//   document.documentElement.classList.add("dark");
-//   localStorage.setItem("theme", "dark");
-//   iconToggle();
-// };
-
-// // call them switch on clicking buttons
-// sunIcon.addEventListener("click", () => {
-//   themeSwitch();
-// });
-
-// moonIcon.addEventListener("click", () => {
-//   themeSwitch();
-// });
-
-// // invoke them check on inital load
-// themeCheck();
