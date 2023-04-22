@@ -27,9 +27,10 @@ export default function Works() {
     }, []);
 
 
+
     return (
         <div className="card  bg-neutral   ">
-
+{/* 
             <div className="navbar  text-primary-content flex justify-between rounded-t border-bottom">
                 <div>
                     <h1 className="normal-case text-2xl lg:grow ">Portfolio</h1>
@@ -44,7 +45,7 @@ export default function Works() {
                 <h2>Width: {windowSize[0]}</h2>
 
                 <h2>Height: {windowSize[1]}</h2>
-            </div>
+            </div> */}
 
 
             <Outlet />

@@ -47,16 +47,18 @@ export default function Card() {
 
 
     return (
-          <div className="card bg-neutral shadow-xl xl:fixed profile-card xl:p-0" >
+          <div className="card bg-neutral shadow-xl profile-card">
                 <div className="card-body ">
 
                     <figure>
                         <img className="profile-image" src={profileImage} alt="Spencer Renfro" />
                     </figure>
-                    <h2 className="card-title justify-center text-primary-content">Spencer Renfro</h2>
-                    <h3 className="bg-base-300 self-center p-1.5 rounded-lg">Front End Developer</h3>
+                    <h2 className={`${windowSize[0] >= 560 ? 'display-none' : ''} card-title justify-center text-primary-content`}>Spencer Renfro</h2>
+                   
+                    <h3 className={`${windowSize[0] >= 560 ? 'display-none' : ''} bg-base-300 self-center p-1.5 rounded-lg`}>Front End Developer</h3>
+                    
 
-                    <div className="card-actions justify-center flex flex-col">
+                    <div className="card-actions justify-center flex flex-col pt-5 pb-5">
                         {/* TODO: make the button full width on mobile, but auto width on md devices or larger */}
                         <a className="btn btn-primary w-full " href="https://github.com/SpencerwRenfro?tab=projects" target="_blank" rel="noopener noreferrer">
                             Github
@@ -72,12 +74,12 @@ export default function Card() {
                     </div>
 
                     <div>
-                        <ul className="bg-base-300 self-center p-2 rounded-lg">
+                        <ul className="bg-base-300 self-center p-2 rounded-lg flex flex-col">
                             <li> Phone: 217-313-4416</li>
                             <li>Location: Boulder CO</li>
                             <li>Email: Developer@spencerwrenfro.com</li>
-                            <li>Width: {windowSize[0]}</li>
-                            <li>Height: {windowSize[1]}</li>
+                            {/* <li>Width: {windowSize[0]}</li>
+                            <li>Height: {windowSize[1]}</li> */}
                         </ul>
                     </div>
                 </div>

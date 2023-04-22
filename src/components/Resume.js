@@ -70,7 +70,7 @@ export default function Resume() {
 
 
     return (
-        <div className="card  bg-neutral  shadow-xl  mt-10 ">
+        <div className="card  bg-neutral  shadow-xl ">
 
             <div className="main-content home flex justify-center">
                 <div>
@@ -85,9 +85,9 @@ export default function Resume() {
                 <p className="pt-5">
                     This data is taken from https://teamtreehouse.com/spencerrenfro, this is an open source API provided by teamtreehouse
                 </p>
-                <h2>Width: {windowSize[0]}</h2>
+                {/* <h2>Width: {windowSize[0]}</h2>
 
-                <h2>Height: {windowSize[1]}</h2>
+                <h2>Height: {windowSize[1]}</h2> */}
             </div>
 
             {

@@ -20,3 +20,15 @@ hierachy for propjects:
  what it does code previews
  buttons for gifs
  then challenge etc
+
+
+
+
+ NEW NOTES
+
+ make email in the card fit into the box
+ fix navbar to not have spencer renfro/front end dev in mobile
+ fix padding right on navbar
+ add bar or pie graph for stats 
+ remove name from card or navbar not have both
+ change card to only show on about me

@@ -238,6 +238,13 @@ body {
 
 }
 
+.main-navbar {
+  z-index: 1;
+}
+
+.display-none{
+  display: none;
+}
 
 /* @media screen and (min-width: 1280px) {
   .profile-card{

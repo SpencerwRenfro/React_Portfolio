@@ -60,25 +60,27 @@ function App() {
           <Navbar />
         </div>
       </div>
-      <div className="grid grid-cols-12 gap-4 bg-base-300  justify-center">        
-        <div className="col-span-12 md:col-span-4">
-          <Card />
+      <div className="container mx-auto px-4 pt-20 mt-10">
+        <div className="grid grid-cols-12 gap-4 bg-base-300  justify-center">        
+          <div className="col-span-12 md:col-span-4">
+            <Card />
+          </div>
+          <div className="col-span-12 md:col-span-8">
+            <Routes>
+              <Route path="/" element={<AboutMe />} />
+              <Route path="resume" element={<Resume />} />
+              <Route path="works" element={<Works />}>
+                <Route path="polytopia" element={<Polytopia />} />
+                <Route path="polytopia/react-preview" element={<ReactPreview />} />
+                <Route path="polytopia/c-preview" element={<CPreview />} />
+                <Route path="polytopia/javascript-preview" element={<JSPreview />} />
+                <Route path="projecttwo" element={<ProjectTwo />} />
+                <Route path="projectthree" element={<Project3 />} />
+              </Route>
+            </Routes>
+          </div>
         </div>
-        <div className="col-span-12 md:col-span-8">
-          <Routes>
-            <Route path="/" element={<AboutMe />} />
-            <Route path="resume" element={<Resume />} />
-            <Route path="works" element={<Works />}>
-              <Route path="polytopia" element={<Polytopia />} />
-              <Route path="polytopia/react-preview" element={<ReactPreview />} />
-              <Route path="polytopia/c-preview" element={<CPreview />} />
-              <Route path="polytopia/javascript-preview" element={<JSPreview />} />
-              <Route path="projecttwo" element={<ProjectTwo />} />
-              <Route path="projectthree" element={<Project3 />} />
-            </Route>
-          </Routes>
-        </div>
-    </div>
+      </div>      
     </div>
   );
 }
