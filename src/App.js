@@ -61,11 +61,11 @@ function App() {
         </div>
       </div>
       <div className="container mx-auto px-4 pt-20 mt-10">
-        <div className="grid grid-cols-12 gap-4 bg-base-300  justify-center">        
-          <div className="col-span-12 md:col-span-4">
+        {/* <div className="grid grid-cols-12 gap-4 bg-base-300  justify-center">         */}
+          {/* <div className="col-span-12 md:col-span-4">
             <Card />
-          </div>
-          <div className="col-span-12 md:col-span-8">
+          </div> */}
+          <div >
             <Routes>
               <Route path="/" element={<AboutMe />} />
               <Route path="resume" element={<Resume />} />
@@ -79,7 +79,7 @@ function App() {
               </Route>
             </Routes>
           </div>
-        </div>
+        {/* </div> */}
       </div>      
     </div>
   );

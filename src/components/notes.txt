@@ -32,3 +32,4 @@ hierachy for propjects:
  add bar or pie graph for stats 
  remove name from card or navbar not have both
  change card to only show on about me
+ fix the padding on the top of my different project titles
