@@ -35,18 +35,18 @@ export default function AboutMe() {
     <div className="container mx-auto px-4  mt-10">
 
     
-    <div className="grid grid-cols-12 gap-4 bg-base-300  justify-center">
+    <div className="grid grid-cols-12 gap-4 lg:gap-40 bg-base-300  justify-center">
       <div className="col-span-12 md:col-span-4">
         <Card />
       </div>
 
       <div className="bg-neutral card shadow-xl col-span-12 md:col-span-8">
         <div className="card-body">
-          <div>
+          {/* <div>
             <h2>Width: {windowSize[0]}</h2>
 
             <h2>Height: {windowSize[1]}</h2>
-          </div>
+          </div> */}
           {/* overflow-auto  max-h-[50rem] this is for scroll bar */}
           <div className="pb-5">
             <h1 className="text-primary-content text-3xl font-bold">
@@ -106,12 +106,12 @@ export default function AboutMe() {
               </p>
             </div>
           </div>
-          ​
+        
           <h2 className="text-primary-content text-xl text-center pb-3">
             Favorite Technologies
           </h2>
-          ​
-          <div class="grid grid-cols-12 justify-items-center gap-4 flex-wrap">
+        
+          <div className="grid grid-cols-12 justify-items-center gap-4 flex-wrap">
             <div className="col-span-6 md:col-span-3 pb-5">
               <img
                 className="w-4/6 md:w-1/2 mx-auto pb-3"

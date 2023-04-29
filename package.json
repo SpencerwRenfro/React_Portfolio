@@ -10,6 +10,7 @@
     "daisyui": "^2.50.1",
     "lottie-react-native": "^5.1.5",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-native-webview": "^11.26.1",
     "react-router-dom": "^6.8.1",

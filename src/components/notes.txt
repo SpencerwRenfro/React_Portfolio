@@ -33,3 +33,5 @@ hierachy for propjects:
  remove name from card or navbar not have both
  change card to only show on about me
  fix the padding on the top of my different project titles
+ add login form project instead of gif
+ add light/dark theme to always be dark

@@ -55,12 +55,12 @@ function App() {
       {/* <div className=" flex justify-center md:justify-end bg-base-300"> */}
       <div>
         {/*  className="grid grid-cols-12  bluebox" */}
-        <div className=" flex justify-center bg-base-300">
+        <div className=" flex justify-center bg-base-300 pt-0">
           {/*  className="col-span-3 md:col-span-12 md:col-end-12  redbox" */}
           <Navbar />
         </div>
       </div>
-      <div className="container mx-auto px-4 pt-20 mt-10">
+      <div className="container mx-auto px-4 pt-10 lg:pt-20 mt-10">
         {/* <div className="grid grid-cols-12 gap-4 bg-base-300  justify-center">         */}
           {/* <div className="col-span-12 md:col-span-4">
             <Card />

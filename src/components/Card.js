@@ -50,10 +50,11 @@ export default function Card() {
           <div className="card bg-neutral shadow-xl profile-card">
                 <div className="card-body ">
 
+
                     <figure>
                         <img className="profile-image" src={profileImage} alt="Spencer Renfro" />
                     </figure>
-                    <h2 className={`${windowSize[0] >= 560 ? 'display-none' : ''} card-title justify-center text-primary-content`}>Spencer Renfro</h2>
+                    <h2 className={`${windowSize[0] >= 560 ? 'display-none' : ''} card-title justify-center text-primary-content`}>Spencer W Renfro</h2>
                    
                     <h3 className={`${windowSize[0] >= 560 ? 'display-none' : ''} bg-base-300 self-center p-1.5 rounded-lg`}>Front End Developer</h3>
                     

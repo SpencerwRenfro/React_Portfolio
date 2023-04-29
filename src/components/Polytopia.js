@@ -85,7 +85,7 @@ export default function Polytopia() {
             </div>
             <div className="previewButton flex justify-center">
 
-                <label htmlFor="my-modal" className="btn btn-primary" onClick={gifHandler}>JavaScript Preview</label>
+                {/* <label htmlFor="my-modal" className="btn btn-primary" onClick={gifHandler}>JavaScript Preview</label> */}
             </div>
 
             <h2 className="mt-10 text-primary-content text-3xl font-bold ">React</h2>
@@ -98,7 +98,7 @@ export default function Polytopia() {
             </div>
             <div className="previewButton flex justify-center">
 
-                <label htmlFor="my-modal" className="btn btn-primary" onClick={gifHandler}>React Preview</label>
+                {/* <label htmlFor="my-modal" className="btn btn-primary" onClick={gifHandler}>React Preview</label> */}
             </div>
     
             <input type="checkbox" id="my-modal" className="modal-toggle w-full" />
