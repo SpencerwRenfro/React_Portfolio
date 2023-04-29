@@ -27,8 +27,8 @@ export default function Navbar(props) {
 
 
   return (
-    <div className="  main-navbar bg-base-100 lg:pr-20">
-      <div className="lg:flex-1 ">
+    <div className="navbar main-navbar bg-base-100">
+      <div className="navbar-start ">
         <a href="." className="normal-case text-xl">
           <div className="flex flex-col">
             <p className={`${windowSize[0] <= 560 ? 'display-none' : ''}`}>Spencer Renfro</p>
@@ -37,26 +37,25 @@ export default function Navbar(props) {
         </a>
       </div>
 
-      <div className="menu justify-center menu-horizontal">
-        <ul className="menu menu-horizontal   px-1">
-          <li>
-            <NavLink to="/" activestyle="primary-focus">About</NavLink>
-          </li>
-          <li>
-            <NavLink to="resume" activestyle="primary-focus">Education</NavLink>
-          </li>
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost rounded-btn capitalize text-base white">Projects</label>
-            <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-              <li><NavLink className=" lg:text-base" activestyle="primary-focus" to="works/polytopia">Polytopia</NavLink></li>
-              <li><NavLink className="text-xs lg:text-base" activetyle="primary-focus" to="works/projecttwo">Facebook Reactions</NavLink></li>
-              <li><NavLink className="text-xs lg:text-base" activestyle="primary-focus" to="works/projectthree">Log in Form</NavLink></li>
-            </ul>
-          </div> 
+      <div className="navbar-end">
+        <ul className="menu menu-horizontal">
+          <li><NavLink className="btn-ghost" to="/">About</NavLink></li>
+          <li><NavLink className="btn-ghost" to="resume">Education</NavLink></li>
+          <li><NavLink className="btn-ghost" to="projectsPage">Projects Page</NavLink></li>
         </ul>
       </div>
-
-      
     </div>
   );
 }
+
+    /* background-color: hsl(var(--p) / var(--tw-bg-opacity)); 
+
+
+{/* <div className="dropdown dropdown-end">
+<label tabIndex={0} className="btn btn-ghost rounded-btn capitalize text-base white">Projects</label>
+<ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+  <li><li><NavLink className=" lg:text-base" activestyle="" to="works/polytopia">Polytopia</NavLink></li></li>
+  <li><li><NavLink className="text-xs lg:text-base" activetyle="" to="works/projecttwo">Facebook Reactions</NavLink></li></li>
+  <li><li><NavLink className="text-xs lg:text-base" activestyle="" to="works/projectthree">Log in Form</NavLink></li></li>
+</ul>
+</div>  */

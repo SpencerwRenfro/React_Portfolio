@@ -19,6 +19,7 @@ import Project3 from "./components/Project3";
 import ReactPreview from "./components/ReactPreview";
 import CPreview from "./components/CPreview";
 import JSPreview from "./components/JSPreview";
+import ProjectsPage from "./components/ProjectsPage";
 
 
 function App() {
@@ -69,11 +70,19 @@ function App() {
             <Routes>
               <Route path="/" element={<AboutMe />} />
               <Route path="resume" element={<Resume />} />
+
+                <Route path="projectsPage" element={<ProjectsPage/>}>
+                  <Route path="polytopia" element={<Polytopia />} />
+                  <Route path="projecttwo" element={<ProjectTwo />} />
+                  <Route path="projectthree" element={<Project3 />} />
+                </Route>
+
+
               <Route path="works" element={<Works />}>
                 <Route path="polytopia" element={<Polytopia />} />
-                <Route path="polytopia/react-preview" element={<ReactPreview />} />
+                {/* <Route path="polytopia/react-preview" element={<ReactPreview />} />
                 <Route path="polytopia/c-preview" element={<CPreview />} />
-                <Route path="polytopia/javascript-preview" element={<JSPreview />} />
+                <Route path="polytopia/javascript-preview" element={<JSPreview />} /> */}
                 <Route path="projecttwo" element={<ProjectTwo />} />
                 <Route path="projectthree" element={<Project3 />} />
               </Route>

@@ -53,7 +53,7 @@ export default function Polytopia() {
 
     }
     return (
-        <div className="ml-3 ">
+        <div className="ml-3 pt-5 pb-5">
             <div className="flex justify-center border-bottom">
                 <h1 className="mt-10 text-primary-content text-3xl justify-center font-bold ">Polytopia Battle Calculator </h1>
             </div>

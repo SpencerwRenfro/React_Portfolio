@@ -35,12 +35,12 @@ export default function AboutMe() {
     <div className="container mx-auto px-4  mt-10">
 
     
-    <div className="grid grid-cols-12 gap-4 lg:gap-40 bg-base-300  justify-center">
-      <div className="col-span-12 md:col-span-4">
+    <div className="grid grid-cols-12 gap-4 xl:gap-40 bg-base-300  justify-center">
+      <div className="col-span-12 xl:col-span-4">
         <Card />
       </div>
 
-      <div className="bg-neutral card shadow-xl col-span-12 md:col-span-8">
+      <div className="col-span-12 xl:col-span-6 bg-neutral card shadow-xl">
         <div className="card-body">
           {/* <div>
             <h2>Width: {windowSize[0]}</h2>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Pie, Bar } from "react-chartjs-2";
-import { Chart as ChartJS } from "chart.js/auto";
+// import { Chart as ChartJS } from "chart.js/auto";
 
 
 
@@ -48,18 +48,18 @@ export default function Resume(props) {
     let chartSchema = {};
 
     if(treeHouseProfile){
-        const pointsPropertyNames = Object.keys(treeHouseProfile.points);
-        const filteredPointsPropertyNames = pointsPropertyNames.filter(key => !key.includes("total"));
-        const chartDataValues = filteredPointsPropertyNames.map((name) => treeHouseProfile.points[name]);
-        console.log(pointsPropertyNames);
+        // const pointsPropertyNames = Object.keys(treeHouseProfile.points);
+        // const filteredPointsPropertyNames = pointsPropertyNames.filter(key => !key.includes("total"));
+        // const chartDataValues = filteredPointsPropertyNames.map((name) => treeHouseProfile.points[name]);
+        // console.log(pointsPropertyNames);
 
 
         chartSchema = {
             labels:  Object.keys(treeHouseProfile?.points).filter(key => !key.includes("total")).map((key) => key),
             datasets: [{
               label: "Points",
-              data: chartDataValues,
-            //   data: Object.keys(treeHouseProfile?.points).filter(key => !key.includes("total")).map((key) => treeHouseProfile.points[key]),
+            //   data: chartDataValues,
+            data: Object.keys(treeHouseProfile?.points).filter(key => !key.includes("total")).map((key) => treeHouseProfile.points[key]),
               backgroundColor: [
                 "rgba(75,192,192,1)",
                 "#ecf0f1",
@@ -171,6 +171,8 @@ return (
     </div>
 );
 }
+
+
 
 
 
