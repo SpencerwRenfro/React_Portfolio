@@ -12,8 +12,7 @@ export default function AboutMe() {
   let gitHub = `${process.env.PUBLIC_URL}/images/github.png`;
   let restAPI = `${process.env.PUBLIC_URL}/images/RestApi.png`;
   
-  // react-new.png
-  // C:\Users\Spenc\Repositories\React\Portfolio\react-portfolio\public\images\node-svg.jpg
+
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
@@ -32,22 +31,22 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4  mt-10">
-
+    <div className="">
+{/* mx-auto px-4   mt-10 */}
     
-    <div className="grid grid-cols-12 gap-4 xl:gap-40 bg-base-300  justify-center">
-      <div className="col-span-12 xl:col-span-4">
+    <div className="grid grid-cols-12 gap-4">
+      <div className="col-span-12 
+      lg:col-start-1 lg:col-end-5
+       xl:col-start-2 xl:col-end-5">
         <Card />
       </div>
 
-      <div className="col-span-12 xl:col-span-6 bg-neutral card shadow-xl">
+      <div className="col-span-12 
+      lg:col-start-5 lg:col-end-12
+      xl:col-start-6 xl:col-end-12
+       bg-neutral shadow-xl">
         <div className="card-body">
-          {/* <div>
-            <h2>Width: {windowSize[0]}</h2>
 
-            <h2>Height: {windowSize[1]}</h2>
-          </div> */}
-          {/* overflow-auto  max-h-[50rem] this is for scroll bar */}
           <div className="pb-5">
             <h1 className="text-primary-content text-3xl font-bold">
               About Me

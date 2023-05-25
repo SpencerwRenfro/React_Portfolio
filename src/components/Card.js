@@ -59,28 +59,28 @@ export default function Card() {
                     <h3 className={`${windowSize[0] >= 560 ? 'display-none' : ''} bg-base-300 self-center p-1.5 rounded-lg`}>Front End Developer</h3>
                     
 
-                    <div className="card-actions justify-center flex flex-col pt-5 pb-5">
+
+                    <div className="grid grid-cols-12 gap-2  pt-5 pb-5">
+                      {/* card-actions */}
                         {/* TODO: make the button full width on mobile, but auto width on md devices or larger */}
-                        <a className="btn btn-primary w-full " href="https://github.com/SpencerwRenfro?tab=projects" target="_blank" rel="noopener noreferrer">
+                        <a className="col-span-12 btn btn-primary" href="https://github.com/SpencerwRenfro?tab=projects" target="_blank" rel="noopener noreferrer">
                             Github
                         </a>
-                        <a className="btn btn-primary w-full" href="https://www.linkedin.com/in/spencer-renfro-854b22174/" target="_blank" rel="noopener noreferrer">
+                        <a className=" col-span-12 btn btn-primary" href="https://www.linkedin.com/in/spencer-renfro-854b22174/" target="_blank" rel="noopener noreferrer">
                             LinkedIn
                         </a>
                           {/* <button onClick={onButtonClick} className="btn btn-primary flex">Download Resume</button> */}
-                          <a className="btn btn-primary w-full" href="https://docs.google.com/document/d/1vepN6ogWXxj5zuMN96skXjb8uTXHfdQLol_UHH86TDU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                          <a className="col-span-12 btn btn-primary" href="https://docs.google.com/document/d/1vepN6ogWXxj5zuMN96skXjb8uTXHfdQLol_UHH86TDU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                             Resume
                           </a>
 
                     </div>
 
                     <div>
-                        <ul className="bg-base-300 self-center p-2 rounded-lg flex flex-col">
+                        <ul className="bg-base-300 p-2 rounded-lg flex flex-col lg:pt-10 lg:pb-10">
                             <li> Phone: 217-313-4416</li>
                             <li>Location: Boulder CO</li>
                             <li>Email: Developer@spencerwrenfro.com</li>
-                            {/* <li>Width: {windowSize[0]}</li>
-                            <li>Height: {windowSize[1]}</li> */}
                         </ul>
                     </div>
                 </div>

@@ -23,72 +23,25 @@ import ProjectsPage from "./components/ProjectsPage";
 
 
 function App() {
-
-
-  // fetch request
-
-  // const onButtonClick = () => {
-  //   // using Java Script method to get PDF file
-
-  //   fetch("Resume.pdf").then((response) => {
-  //     response.blob().then((blob) => {
-  //       // Creating new object of PDF file
-
-  //       const fileURL = window.URL.createObjectURL(blob);
-
-  //       // Setting various property values
-  //       // let alink = document.createElement("a");
-
-
-  //       let alink = React.createElement('a',null, '');
-  //       alink.href = fileURL;
-  //       alink.download = "Resume.pdf";
-  //       alink.click();
-  //     });
-  //   });
-  // };
-
-
-
   return (
-    <div className="bg-base-300">
-      {/* grid  md:grid-cols-1" */}
-      {/* <div className=" flex justify-center md:justify-end bg-base-300"> */}
+    <div className="bg-base-100">
       <div>
-        {/*  className="grid grid-cols-12  bluebox" */}
-        <div className=" flex justify-center bg-base-300 pt-0">
-          {/*  className="col-span-3 md:col-span-12 md:col-end-12  redbox" */}
+        <div className=" flex justify-center bg-base-100 pt-0">
           <Navbar />
         </div>
       </div>
-      <div className="container mx-auto px-4 pt-10 lg:pt-20 mt-10">
-        {/* <div className="grid grid-cols-12 gap-4 bg-base-300  justify-center">         */}
-          {/* <div className="col-span-12 md:col-span-4">
-            <Card />
-          </div> */}
+      <div className="px-4 pt-20 md:pt-32">
+        {/*     <div className="container mx-auto px-4 pt-10 lg:pt-20 mt-10"> */}
           <div >
             <Routes>
               <Route path="/" element={<AboutMe />} />
               <Route path="resume" element={<Resume />} />
-
-                <Route path="projectsPage" element={<ProjectsPage/>}>
-                  <Route path="polytopia" element={<Polytopia />} />
-                  <Route path="projecttwo" element={<ProjectTwo />} />
-                  <Route path="projectthree" element={<Project3 />} />
-                </Route>
-
-
-              <Route path="works" element={<Works />}>
-                <Route path="polytopia" element={<Polytopia />} />
-                {/* <Route path="polytopia/react-preview" element={<ReactPreview />} />
-                <Route path="polytopia/c-preview" element={<CPreview />} />
-                <Route path="polytopia/javascript-preview" element={<JSPreview />} /> */}
-                <Route path="projecttwo" element={<ProjectTwo />} />
-                <Route path="projectthree" element={<Project3 />} />
-              </Route>
+              <Route path="projectsPage" element={<ProjectsPage/>} />
+              <Route path="/projectsPage/polytopia" element={<Polytopia />} />
+              <Route path="/projectsPage/projecttwo" element={<ProjectTwo />} />
+              <Route path="/projectsPage/projectthree" element={<Project3 />} />
             </Routes>
           </div>
-        {/* </div> */}
       </div>      
     </div>
   );

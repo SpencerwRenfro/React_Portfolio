@@ -133,6 +133,10 @@ code {
   border-radius: solid white 10px;
 }
 
+.buttonMax{
+  max-width: 200px;
+}
+
 
 
 .icn-logo {
@@ -249,10 +253,11 @@ body {
 }
 
 .display-none{
-  
+ 
   transform: scaleX(.5);
   padding: -1;
-  margin: -1;
+  margin: -1; 
+  display: none;
 }
 
 .white{
@@ -263,3 +268,8 @@ body {
   color: red;
 }
 
+
+/* .faceBookBox {
+  width: 500px;
+  height: 600px;
+} */

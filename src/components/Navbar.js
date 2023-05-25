@@ -27,21 +27,21 @@ export default function Navbar(props) {
 
 
   return (
-    <div className="navbar main-navbar bg-base-100">
-      <div className="navbar-start ">
+    <div className="navbar main-navbar bg-base-300">
+      <div className={`${windowSize[0] <= 780 ? 'display-none' : 'md:navbar-start pl-10'}`}>
         <a href="." className="normal-case text-xl">
           <div className="flex flex-col">
-            <p className={`${windowSize[0] <= 560 ? 'display-none' : ''}`}>Spencer Renfro</p>
-            <small className={`${windowSize[0] <= 560 ? 'display-none' : ''}`}>Front-End Developer</small>
+            <p>Spencer Renfro</p>
+            <small>Front-End Developer</small>
           </div>
         </a>
       </div>
 
-      <div className="navbar-end">
-        <ul className="menu menu-horizontal">
-          <li><NavLink className="btn-ghost" to="/">About</NavLink></li>
-          <li><NavLink className="btn-ghost" to="resume">Education</NavLink></li>
-          <li><NavLink className="btn-ghost" to="projectsPage">Projects Page</NavLink></li>
+      <div className="xl:navbar-end">
+        <ul className=" grid grid-cols-12 menu menu-horizontal">
+          <li className="col-span-4"><NavLink className="btn-ghost" to="/">About</NavLink></li>
+          <li className="col-span-4"><NavLink className="btn-ghost" to="resume">Education</NavLink></li>
+          <li className="col-span-4"><NavLink className="btn-ghost" to="projectsPage">Projects Page</NavLink></li>
         </ul>
       </div>
     </div>
