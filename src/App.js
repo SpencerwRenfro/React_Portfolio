@@ -45,6 +45,7 @@ function App() {
       </div>      
     </div>
   );
+  // new
 }
 
 export default App;
